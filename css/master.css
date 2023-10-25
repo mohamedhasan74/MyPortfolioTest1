@@ -1,0 +1,290 @@
+/* start main rules  */
+:root {
+    --main-color: #0d6efd;
+    --bg-body : #f5f5f5;
+    --transition-duration-5: 0.5s ;
+    --transition-duration-1: 1s ;
+}
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    background-color: var(--bg-body);
+}
+.transition-du-5 {
+    transition: var(--transition-duration-5);
+}
+.transition-du-1 {
+    transition: var(--transition-duration-1);
+}
+.special-heading::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: var(--main-color);
+}
+/* end main rules  */
+/* start navbar  */
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-color);
+    transition: var(--transition-duration-5)
+}
+.nav-link:hover::before, .active::before {
+    width: 2rem;
+}
+@media screen and (min-width: 992px){
+    .nav-link::before {
+        left: 0.5rem;
+    }
+}
+/* end navbar  */
+/* start header   */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/intro-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+header h1 {
+    font-size: 4rem;
+}
+.anim-text::before {
+    content: "";
+    animation: moving-text 5s linear  infinite alternate;
+    text-transform: capitalize;
+}
+@keyframes moving-text {
+    0% {
+        content: "|";
+    }
+    3% {
+        content: "f|";
+    }
+    5% {
+        content: "fr|";
+    }
+    8% {
+        content: "fro|";
+    }
+    10% {
+        content: "fron|";
+    }
+    13% {
+        content: "front|";
+    }
+    15% {
+        content: "fronte|";
+    }
+    18% {
+        content: "fronten|";
+    }
+    20% {
+        content: "frontend|";
+    }
+    23% {
+        content: "frontend |";
+    }
+    25% {
+        content: "frontend d|";
+    }
+    28% {
+        content: "frontend de|";
+    }
+    30% {
+        content: "frontend dev|";
+    }
+    33% {
+        content: "frontend deve|";
+    }
+    35% {
+        content: "frontend devel|";
+    }
+    38% {
+        content: "frontend develo|";
+    }
+    40% {
+        content: "frontend develop|";
+    }
+    43% {
+        content: "frontend develope|";
+    }
+    45% {
+        content: "frontend developer|";
+    }
+    48% {
+        content: "frontend develope|";
+    }
+    50% {
+        content: "frontend develop|";
+    }
+    53% {
+        content: "frontend develo|";
+    }
+    55% {
+        content: "frontend devel|";
+    }
+    58% {
+        content: "frontend deve|";
+    }
+    60% {
+        content: "frontend dev|";
+    }
+    63% {
+        content: "frontend de|";
+    }
+    65% {
+        content: "frontend d|";
+    }
+    68% {
+        content: "frontend |";
+    }
+    70% {
+        content: "frontend|";
+    }
+    73% {
+        content: "fronten|";
+    }
+    75% {
+        content: "fronte|";
+    }
+    78% {
+        content: "front|";
+    }
+    80% {
+        content: "fron|";
+    }
+    83% {
+        content: "fro|";
+    }
+    85% {
+        content: "fr|";
+    }
+    90% {
+        content: "f|";
+    }
+    100% {
+        content: "|";
+    }
+}
+/* end header  */
+/* start about  */
+.progress {
+    height: 0.7rem;
+}
+.w-40 {
+    width: 40%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-85 {
+    width: 85%;
+}
+.w-90 {
+    width: 90%;
+}
+.heading-text::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 3px;
+    background-color: var(--main-color);
+}
+/* end about  */
+/* start services  */
+.icon {
+    width: 120px;
+    height: 120px;
+    border: 0.5rem solid var(--main-color);
+}
+.serv:hover .icon,
+.socila-icon:hover{
+    background-color: var(--main-color);
+    border-color:#cfe2ff !important;
+}
+.serv:hover .icon svg,
+.socila-icon:hover svg{
+    color: white;
+}
+/* end services  */
+/* start states  */
+.states {
+    background-image: linear-gradient(#0078ffb3, #0078ffb3),url(../images/counters-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.state-icon {
+    width: 80px;
+    height: 80px;
+    border: 0.5rem solid #cfe2ff;
+}
+/* end states  */
+/* start portfolio  */
+.port-card:hover img {
+    transform: scale(1.3);
+}
+.main-text p:last-of-type{
+    font-size: 0.75rem;
+}
+.main-btn {
+    width: 30px;
+    height: 30px;
+}
+/* end portfolio  */
+/* start testimonial  */
+.testimonial,
+.contact {
+    background-image: linear-gradient(#0078ffb3, #0078ffb3),url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.testimonial .item-icon {
+    width: 50px;
+    height: 50px;
+}
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 5px;
+}
+.carousel-indicators [data-bs-target][class="active"] {
+    background-color: #000;
+}
+/* end testimonial  */
+/* start blog  */
+.card-body h6 {
+    width: fit-content;
+    font-size: 0.75rem;
+    transform: translateX(-50%);
+    top: -1rem;
+}
+.footer-content a:hover {
+    color: var(--main-color) !important;
+}
+/* end blog  */
+/* start contact  */
+form input,
+form textarea {
+    border: 1px solid #ced4da;
+    outline: none;
+}
+form :focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+}
+.socila-icon{
+    width: 35px;
+    height: 35px;
+}
+/* end contact  */
